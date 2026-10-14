@@ -1,0 +1,6 @@
+{
+  "name": "Nerasa - Discover The Root Of Taste",
+  "description": "Website resmi Nerasa Kafe Samarinda. Menu lengkap makanan & kopi spesial, galeri foto estetik, ulasan pengunjung, serta sistem reservasi meja online.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
