@@ -32,7 +32,6 @@ jobs:
       - name: Install dependencies
         run: npm install --legacy-peer-deps
 
-      # Memaksa build tetap selesai meskipun ada error TypeScript/Linter kecil dari AI Studio
       - name: Build Project
         run: |
           npm run build --if-present || true
@@ -40,7 +39,6 @@ jobs:
           VITE_GEMINI_API_KEY: ${{ secrets.VITE_GEMINI_API_KEY }}
           CI: false
 
-      # Jika folder dist entah bagaimana kosong, baris ini memastikan ada folder build yang siap dideploy
       - name: Ensure Build Directory Exists
         run: |
           if [ ! -d "./dist" ]; then
@@ -48,7 +46,7 @@ jobs:
             echo "<h1>Situs sedang disiapkan</h1>" > ./dist/index.html
           fi
 
-       Silber-Name: Setup Pages
+      - name: Setup Pages
         uses: actions/configure-pages@v4
 
       - name: Upload artifact
